@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "../../styles/main.scss";
 import Widget from "./WeatherWidget/Widget";
+import data from "../data/weather";
 
 const App = () => {
     return (
-        <Widget />
+        <Widget data={data[1]} />
     )
 }
 
