@@ -4,9 +4,9 @@ import Widget from "./WeatherWidget/Widget";
 import data from "../data/weather";
 
 const App = () => {
-    return (
-        <Widget data={data[1]} />
-    )
+  return (
+    <Widget data={data[1]} />
+  )
 }
 
 export default App;

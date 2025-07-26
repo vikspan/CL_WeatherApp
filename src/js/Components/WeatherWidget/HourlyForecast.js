@@ -7,12 +7,13 @@ const HourlyForecast = (props) => {
     return (
         <div className="hourly__forecast">
             {
-                forecast.map((hour, i) => {
+                forecast.map((el, i) => {
+                    const {hour, state, temperature} = el;
                     return (
                         <div key={i} className="hourly__forecast--item">
-                            <span>{hour.hour}</span>
-                            <span>{hour.state}</span>
-                            <span>{hour.temperature}°C</span>
+                            <span>{hour}</span>
+                            <span>{state}</span>
+                            <span>{temperature}°C</span>
                         </div>
                     )
                 })
