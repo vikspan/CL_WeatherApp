@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Details.scss";
-import sunriseIcon from "../../../assets/img/sunrise.svg";
-import sunsetIcon from "../../../assets/img/sunset.svg";
-import detailsIcon from "../../../assets/img/details.svg";
+import sunriseIcon from "../../../../assets/img/sunrise.svg";
+import sunsetIcon from "../../../../assets/img/sunset.svg";
+import detailsIcon from "../../../../assets/img/details.svg";
 import DetailsData from "./DetailsData";
 
 const Details = (props) => {

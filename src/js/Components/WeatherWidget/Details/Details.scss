@@ -1,0 +1,31 @@
+.widget__details {
+  h2 {
+    font-weight: 300;
+  }
+
+  .widget__details__sun {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1em;
+
+    img {
+      width: 100%;
+    }
+
+    .widget__details__sun--sunrise,
+    .widget__details__sun--sunset {
+      display: flex;
+      flex-direction: column;
+      width: 10%;
+      align-items: center;
+    }
+
+  }
+
+  .widget__details__data {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
