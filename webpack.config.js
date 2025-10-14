@@ -13,24 +13,20 @@ module.exports = {
   output: {
     filename: isProd ? "out.[contenthash].js" : "out.js",
     path: path.resolve(__dirname, isProd ? "docs" : `${entryPath}/build`),
-    publicPath: "./",
+    publicPath: "/",
     clean: true,
   },
   devServer: {
-    open: true,
-    hot: true,
-    static: [
-      {
-        directory: path.join(__dirname, entryPath),
-        publicPath: "/",
-        serveIndex: true,
-      },
-    ],
+    static: {
+      directory: path.join(__dirname, entryPath),
+    },
     devMiddleware: {
       writeToDisk: true,
     },
+    hot: true,
     compress: true,
     port: 3001,
+    open: true,
     historyApiFallback: true,
   },
   module: {
@@ -38,15 +34,7 @@ module.exports = {
       {
         test: /\.jsx?$/i,
         exclude: /node_modules/,
-        loader: "babel-loader",
-      },
-      {
-        test: /\.css$/i,
-        exclude: /node_modules/,
-        use: [
-          isProd ? MiniCssExtractPlugin.loader : "style-loader",
-          "css-loader",
-        ],
+        use: "babel-loader",
       },
       {
         test: /\.s[ac]ss$/i,
@@ -56,9 +44,7 @@ module.exports = {
           "css-loader",
           {
             loader: "postcss-loader",
-            options: {
-              postcssOptions: { plugins: [["autoprefixer"]] },
-            },
+            options: { postcssOptions: { plugins: [["autoprefixer"]] } },
           },
           "sass-loader",
         ],
@@ -75,9 +61,8 @@ module.exports = {
       process: "process/browser",
     }),
     new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: path.join(entryPath, "index.html"),
-      inject: "body", // allow it to inject script tags
+      template: "./src/index.html",
+      inject: "body",
     }),
     new MiniCssExtractPlugin({
       filename: isProd ? "css/style.[contenthash].css" : "css/style.css",
