@@ -20,6 +20,9 @@ node_modules/
 ### Webstorm ###
 .idea/
 
+# Ignore build source maps
+*.map
+
 ### Other ###
 .test/
 .solution
