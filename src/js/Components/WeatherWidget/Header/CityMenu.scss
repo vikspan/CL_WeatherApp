@@ -1,0 +1,25 @@
+@use "../../../../styles/general/variables" as *;
+
+.widget__header--menu {
+  display: flex;
+  justify-content: space-between;
+
+  .widget__header--menu-item {
+    color: $primary;
+    font-family: inherit;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px 12px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

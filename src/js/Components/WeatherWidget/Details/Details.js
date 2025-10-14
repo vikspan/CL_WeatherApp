@@ -9,7 +9,6 @@ const Details = (props) => {
   const { sunrise, sunset, realFeel, humidity, wind, pressure } = props.details;
   return (
     <div className="widget__details">
-      <h2>Details</h2>
       <div className="widget__details__sun">
         <div className="widget__details__sun--sunrise">
           <img src={sunriseIcon} />

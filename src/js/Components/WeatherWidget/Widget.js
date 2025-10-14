@@ -10,7 +10,7 @@ const Widget = (props) => {
   const { details } = props.data;
   return (
     <section className="widget__section">
-      <Header city={city} temp={currentTemperature} state={state} />
+      <Header city={city} temp={currentTemperature} state={state} setCity={props.setCity} cities={props.cities}  />
       <HourlyForecast forecast={hourly} />
       <Details details={details} />
     </section>

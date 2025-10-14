@@ -3,7 +3,7 @@ import styles from "./HourlyForecast.scss";
 
 const HourlyForecast = (props) => {
   const { forecast } = props;
-  console.log(forecast);
+
   return (
     <div className="hourly__forecast">
       {
