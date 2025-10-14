@@ -1,15 +1,26 @@
 @use "./general/variables";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: black;
-    background-image: url("../assets/img/bg.png");
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: variables.$primary;
-    font-family: variables.$font;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: black;
+  background-image: url("../assets/img/bg.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: variables.$primary;
+  font-family: variables.$font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
