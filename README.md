@@ -4,15 +4,14 @@ A simple weather app widget built with React, inspired by [Figma design](https:/
 
 ## 🌐 Live Demo
 
-Check out the live demo here:
-
-[Weather Widget Live](https://vikspan.github.io/CL_WeatherApp/)
+Check out the live demo here: [Weather Widget Live](https://vikspan.github.io/CL_WeatherApp/)
 
 
 ## 🌦️ Features
 
-- Displays current weather with temperature and condition
-- Hourly forecast for the next few hours
+- Displays simulated current weather data with temperature and condition
+- Hourly forecast preview for the next few hours
+- City selection menu in the header — switch between cities to view their weather
 - Additional details: RealFeel, humidity, wind force, pressure, sunrise & sunset
 - Responsive design for desktop and mobile
 
