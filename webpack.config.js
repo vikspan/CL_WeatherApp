@@ -13,7 +13,7 @@ module.exports = {
   output: {
     filename: isProd ? "out.[contenthash].js" : "out.js",
     path: path.resolve(__dirname, isProd ? "docs" : `${entryPath}/build`),
-    publicPath: "/",
+    publicPath: isProd ? "/CL_WeatherApp/" : "/",
     clean: true,
   },
   devServer: {
